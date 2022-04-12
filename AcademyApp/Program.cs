@@ -24,7 +24,8 @@ namespace AcademyApp
                     "2-Update Group\n" +
                     "3-Remove Group\n" +
                     "4-Get Group \n" +
-                    "5-GetAll Group");
+                    "5-GetAll Group\n" +
+                    "6-GetAll Group By Name");
                 string num = Console.ReadLine();
                 int input;
 
@@ -37,14 +38,24 @@ namespace AcademyApp
                             groupController.CreateGroup();
                             break;
                         case 2:
+                            
+
+
                             break;
                         case (int)Extention.Menu.RemoveGroup:
                             groupController.RemoveGroup();
                             break;
                         case 4:
+
+
+
                             break;
                         case (int)Extention.Menu.GetAllGroup:
                             groupController.GetAllGroup();
+                            break;
+
+                        case 6:
+                            groupController.GetAllByName();
                             break;
                     }
                 }

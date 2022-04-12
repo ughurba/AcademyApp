@@ -18,10 +18,11 @@ namespace Business.Services
 
         public Group Create(Group group)
         {
+            Count++;
             group.Id = Count;
 
             _groupRepository.Create(group);
-            Count++;
+            
             return group;
             
         }
@@ -59,7 +60,7 @@ namespace Business.Services
 
         public List<Group> GetAll(string name = null)
         {
-            throw new NotImplementedException();
+           return  _groupRepository.GetAll(g => g.Name == name);
         }
     }
 }

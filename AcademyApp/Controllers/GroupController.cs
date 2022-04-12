@@ -55,9 +55,21 @@ namespace AcademyApp.Controllers
         }
         public void RemoveGroup()
         {
+            Extention.Print(ConsoleColor.Cyan,"Write Id please");
             int id = int.Parse(Console.ReadLine());
             Extention.Print(ConsoleColor.Green, $"{groupService.Delete(id).Name}");
             
+        }
+       public void GetAllByName()
+        {
+            Extention.Print(ConsoleColor.Cyan,"Write Name please");
+            string name = Console.ReadLine();
+            foreach (var item in groupService.GetAll(name))
+            {
+                Extention.Print(ConsoleColor.Green, $"Id{item.Id}\nName:{item.Name}");
+            }
+            
+           
         }
     }
 }

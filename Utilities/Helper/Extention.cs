@@ -14,10 +14,11 @@ namespace Utilities.Helper
         }
         public enum Menu
         {
+
             CreateGroup=1,
             UpdateGroup,
             RemoveGroup,
-            GetAllGroup=5
+            GetAllGroup=4
 
 
         }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DTEptSJfKTapG5VUVkGlHqQol3SBEoqFF2W9FSaL9qzJb8UcMXW5S9Nbvx06YDN85PzKbON62O62zUeD3ne9sA==",
+  "dgSpecHash": "6hiiLxcF6/1tKffqGTh+YlEz6TUcgXpVVnwmYrm6JjsRfTkoD4yPXYjcybFYTCh3Cx41Os2dW8ZC3sTemeLO3w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Clean__Laptop\\Desktop\\AcademyApp-Lesson\\Business\\Business.csproj",
   "expectedPackageFiles": [
@@ -22,10 +22,7 @@
     "C:\\Users\\Clean__Laptop\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.0\\microsoft.extensions.primitives.3.1.0.nupkg.sha512",
     "C:\\Users\\Clean__Laptop\\.nuget\\packages\\system.collections.immutable\\1.7.0\\system.collections.immutable.1.7.0.nupkg.sha512",
     "C:\\Users\\Clean__Laptop\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
-    "C:\\Users\\Clean__Laptop\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.0\\system.diagnostics.diagnosticsource.4.7.0.nupkg.sha512",
-    "C:\\Users\\Clean__Laptop\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\Clean__Laptop\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\Clean__Laptop\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+    "C:\\Users\\Clean__Laptop\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.0\\system.diagnostics.diagnosticsource.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

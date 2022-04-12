@@ -45,13 +45,32 @@ namespace AcademyApp.Controllers
         }
         public void GetAllGroup()
         {
-            
-            //string name2 = Console.ReadLine();
-
-            foreach (var item in groupService.GetAll())
+            Extention.Print(ConsoleColor.Blue,"1-Get Group by Id\n" +
+                "2-GetAll Group By Name\n" +
+                "3-GetAll");
+          
+            int num = int.Parse(Console.ReadLine());
+            if(num == 1)
             {
-                Extention.Print(ConsoleColor.Yellow, $"{item.Name}");
+                Extention.Print(ConsoleColor.Cyan, "Write Id please");
+                int id = int.Parse(Console.ReadLine());
+                Extention.Print(ConsoleColor.Green, $"{groupService.GetGroup(id).Name}");
+            }else if(num == 2)
+            {
+                Extention.Print(ConsoleColor.Cyan, "Write Name please");
+                string name = Console.ReadLine();
+                foreach (var item in groupService.GetAll(name))
+                {
+                    Extention.Print(ConsoleColor.Green, $"Id{item.Id}\nName:{item.Name}");
+                }
+            }else if (num == 3)
+            {
+                foreach (var item in groupService.GetAll())
+                {
+                    Extention.Print(ConsoleColor.Yellow, $"{item.Name}");
+                }
             }
+          
         }
         public void RemoveGroup()
         {
@@ -60,16 +79,23 @@ namespace AcademyApp.Controllers
             Extention.Print(ConsoleColor.Green, $"{groupService.Delete(id).Name}");
             
         }
-       public void GetAllByName()
-        {
-            Extention.Print(ConsoleColor.Cyan,"Write Name please");
-            string name = Console.ReadLine();
-            foreach (var item in groupService.GetAll(name))
-            {
-                Extention.Print(ConsoleColor.Green, $"Id{item.Id}\nName:{item.Name}");
-            }
+       //public void GetAllByName()
+       // {
+       //     Extention.Print(ConsoleColor.Cyan,"Write Name please");
+       //     string name = Console.ReadLine();
+       //     foreach (var item in groupService.GetAll(name))
+       //     {
+       //         Extention.Print(ConsoleColor.Green, $"Id{item.Id}\nName:{item.Name}");
+       //     }
             
            
-        }
+       // }
+       // public void GetGroupById()
+       // {
+       //     Extention.Print(ConsoleColor.Cyan, "Write Id please");
+       //     int id = int.Parse(Console.ReadLine());
+       //     Extention.Print(ConsoleColor.Green, $"{groupService.GetGroup(id).Name}");
+       // }
+        
     }
 }

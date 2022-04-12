@@ -45,7 +45,7 @@ namespace Business.Services
 
         public Group Update(int Id, Group group)
         {
-            throw new NotImplementedException();
+           return _groupRepository.GetOne();
         }
 
         public List<Group> GetAll()
@@ -61,6 +61,11 @@ namespace Business.Services
         public List<Group> GetAll(string name = null)
         {
            return  _groupRepository.GetAll(g => g.Name == name);
+        }
+
+        public void AddStudent(Student student)
+        {
+           _groupRepository.AddStudent(student);
         }
     }
 }

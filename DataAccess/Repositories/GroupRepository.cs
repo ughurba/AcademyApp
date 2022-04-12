@@ -9,6 +9,19 @@ namespace DataAccess.Repositories
 {
     public class GroupRepository:IRepository<Group>
     {
+        public void AddStudent(Student stu)
+        {
+            try
+            {
+                Group.Students.Add(stu);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
         public bool Create(Group entity)
         {
             try

@@ -38,7 +38,7 @@ namespace Business.Services
 
         public List<Student> GetAll(string name = null)
         {
-            return _studentRepository.GetAll(g => g.Name == name);
+            return _studentRepository.GetAll(g => g.GroupNo == name);
         }
 
         public Student GetStudent(string name)

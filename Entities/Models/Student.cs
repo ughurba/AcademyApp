@@ -9,7 +9,7 @@ namespace Entities.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-
+        public string GroupNo { get; set; }
         public string Surname { get; set; }
     }
 }

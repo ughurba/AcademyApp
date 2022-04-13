@@ -37,9 +37,8 @@ namespace AcademyApp.Controllers
 
                     };
                     groupService.Create(group);
-                    Extention.Print(ConsoleColor.Green, $"Id:{group.Id}\nName:{group.Name} created");
-                    StudentController studentController = new StudentController();
-                    studentController.CreateStudent();
+           
+                    
                 }
                         
             }
@@ -63,7 +62,7 @@ namespace AcademyApp.Controllers
                 Extention.Print(ConsoleColor.Green, $"{groupService.GetGroup(id).Name}");
             }else if(num == 2)
             {
-                Extention.Print(ConsoleColor.Cyan, "Write Name please");
+                Extention.Print(ConsoleColor.Cyan, "Write Name Group please");
                 string name = Console.ReadLine();
                 foreach (var item in groupService.GetAll(name))
                 {

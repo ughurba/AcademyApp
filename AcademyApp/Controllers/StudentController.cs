@@ -31,15 +31,17 @@ namespace AcademyApp.Controllers
                     string name = Console.ReadLine();
                     Extention.Print(ConsoleColor.Blue, $"Student Surname");
                     string surname = Console.ReadLine();
-                    
+                    Extention.Print(ConsoleColor.Blue, $"GroupNo");
+                    string groupNo = Console.ReadLine();
                     Student student = new Student
                     {
+                        GroupNo = groupNo,
                         Name = name,
                         Surname = surname,
                     };
                     studentService.Create(student);
-                    groupService.AddStudent(student);
-                    Extention.Print(ConsoleColor.Green, $"Id:{student.Id}\nName:{student.Name}\nSurname:{student.Surname}\ncreated");
+                    
+                    Extention.Print(ConsoleColor.Green, $"Id:{student.Id}\nName:{student.Name}\nSurname:{student.Surname}\nGroupNo:{groupNo}\ncreated");
                     Extention.Print(ConsoleColor.Red,"************************************");
                 }
           
@@ -53,7 +55,7 @@ namespace AcademyApp.Controllers
         public void GetAllStudent()
         {
             Extention.Print(ConsoleColor.Blue, "1-Get Student by Id\n" +
-                "2-GetAll Student By Name\n" +
+                "2-Get All Student By Group\n" +
                 "3-GetAll");
 
             int num = int.Parse(Console.ReadLine());
@@ -65,11 +67,11 @@ namespace AcademyApp.Controllers
             }
             else if (num == 2)
             {
-                Extention.Print(ConsoleColor.Cyan, "Write Name please");
+                Extention.Print(ConsoleColor.Cyan, "Write Name Group please");
                 string name = Console.ReadLine();
                 foreach (var item in studentService.GetAll(name))
                 {
-                    Extention.Print(ConsoleColor.Green, $"Id{item.Id}\nName:{item.Name}");
+                    Extention.Print(ConsoleColor.Green, $"Id{item.Id}\nName:{item.Name}\nSurname:{item.Surname}\nGroupNo:{item.GroupNo}");
                 }
             }
             else if (num == 3)

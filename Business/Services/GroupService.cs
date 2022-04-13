@@ -11,6 +11,7 @@ namespace Business.Services
     {
         public static int  Count { get; set; }
         private GroupRepository _groupRepository;
+        private StudentRepository _studentRepository;
         public GroupService()
         {
             _groupRepository = new GroupRepository();
@@ -40,6 +41,8 @@ namespace Business.Services
 
         public Group GetGroup(string name)
         {
+           
+           //_studentRepository.GetOne(s => s.GroupNo == name);
             return _groupRepository.GetOne(g=>g.Name==name);
         }
 
@@ -55,7 +58,9 @@ namespace Business.Services
 
         public Group GetGroup(int id)
         {
+
             return _groupRepository.GetOne(g => g.Id == id);
+
         }
 
         public List<Group> GetAll(string name = null)
@@ -63,20 +68,9 @@ namespace Business.Services
            return  _groupRepository.GetAll(g => g.Name == name);
 
         }
+       
 
-        public void AddStudent(Student student)
-        {
-            _groupRepository.AddStudent(student);
-        }
-
-    
-        public void AddStudentToGroup(Student student )
-        {
-            StudentRepository studentRepository = new StudentRepository();
-        
-           Group.Students.Add(student);
-
-        }
+      
 
 
 

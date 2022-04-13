@@ -10,11 +10,11 @@ namespace Entities.Models
         
         public int Id { get; set; }
         public string Name { get; set; }
-        public static List<Student> Students { get; set; }
+      //  public static List<Student> Students { get; set; }
         public int MaxSize { get; set; }
         public Group()
         {
-      Students = new List<Student>();
+           //  Students = new List<Student>();
         }
     }
 }

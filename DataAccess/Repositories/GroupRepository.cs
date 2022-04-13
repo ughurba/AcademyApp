@@ -11,8 +11,10 @@ namespace DataAccess.Repositories
     {
         public void AddStudent(Student stu)
         {
+
             try
             {
+
                 Group.Students.Add(stu);
             }
             catch (Exception)
@@ -20,7 +22,6 @@ namespace DataAccess.Repositories
 
                 throw;
             }
-
         }
         public bool Create(Group entity)
         {

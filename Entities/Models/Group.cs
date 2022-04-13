@@ -14,7 +14,7 @@ namespace Entities.Models
         public int MaxSize { get; set; }
         public Group()
         {
-            Students = new List<Student>();
+      Students = new List<Student>();
         }
     }
 }

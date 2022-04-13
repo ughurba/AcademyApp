@@ -61,11 +61,24 @@ namespace Business.Services
         public List<Group> GetAll(string name = null)
         {
            return  _groupRepository.GetAll(g => g.Name == name);
+
         }
 
         public void AddStudent(Student student)
         {
-           _groupRepository.AddStudent(student);
+            _groupRepository.AddStudent(student);
         }
+
+    
+        public void AddStudentToGroup(Student student )
+        {
+            StudentRepository studentRepository = new StudentRepository();
+        
+           Group.Students.Add(student);
+
+        }
+
+
+
     }
 }

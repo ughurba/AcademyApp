@@ -6,12 +6,12 @@ namespace AcademyApp
 {
     class Program
     {
-
         static void Main(string[] args)
         {
             Extention.Print(ConsoleColor.Green, "Welcome");
             while (true)
             {
+                StudentController studentController = new StudentController();
                 GroupController groupController = new GroupController();
                 Extention.Print(ConsoleColor.Cyan, "1-Create Group\n" +
                     "2-Update Group\n" +
@@ -19,7 +19,6 @@ namespace AcademyApp
                     "4-GetAll Group and Get Group\n");
                 string num = Console.ReadLine();
                 int input;
-
                 bool IsNum = int.TryParse(num, out input);
                 if (IsNum && input < 7 && input > 0)
                 {
@@ -37,6 +36,7 @@ namespace AcademyApp
                         case (int)Extention.Menu.GetAllGroup:
                             groupController.GetAllGroup();
                             break;
+                   
 
                     }
                 }

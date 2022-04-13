@@ -28,14 +28,20 @@ namespace AcademyApp.Controllers
             bool isSize = int.TryParse(groupSize, out size);
             if (isSize)
             {
-                Group group = new Group
+                for (int i = 0; i < size; i++)
                 {
-                    Name = name,
-                    MaxSize = size
-                };
+                    Group group = new Group
+                    {
+                        Name = name,
+                        MaxSize = size
 
-                groupService.Create(group);
-                Extention.Print(ConsoleColor.Green, $"{group.Name} created");
+                    };
+                    groupService.Create(group);
+                    Extention.Print(ConsoleColor.Green, $"Id:{group.Id}\nName:{group.Name} created");
+                    StudentController studentController = new StudentController();
+                    studentController.CreateStudent();
+                }
+                        
             }
             else
             {
